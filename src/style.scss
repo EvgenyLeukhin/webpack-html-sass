@@ -1,0 +1,10 @@
+$color: slateblue;
+
+body {
+  color: $color;
+  display: flex;
+
+  &.color {
+    background: lightyellow;
+  }
+}
