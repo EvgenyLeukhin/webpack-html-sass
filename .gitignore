@@ -15,3 +15,6 @@ src/_design
 .cache/
 .idea
 
+public/fonts/SFProDisplay/+
+public/fonts/Montserrat/+
+
