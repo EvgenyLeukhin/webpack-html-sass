@@ -116,6 +116,7 @@ module.exports = {
     // add favicons
     new FaviconsWebpackPlugin({
       logo: './src/img/icons/favicon.png',
+      publicPath: '.',
       prefix: 'icons-[hash:8]/',
       statsFilename: 'iconstats-[hash:8].json',
       background: '#fff'
