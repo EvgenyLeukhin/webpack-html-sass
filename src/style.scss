@@ -11,6 +11,7 @@ body {
   font-family: 'SF Pro Display';
   color: $color;
   display: flex;
+  font-weight: 600;
   // flex-direction: column;
 
   &.color {

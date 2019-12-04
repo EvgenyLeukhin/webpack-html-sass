@@ -49,24 +49,20 @@ module.exports = {
         }]
       },
 
-      // IMAGES //
+      // convert small IMAGES to base-64 //
       {
-        test: /\.(ico|jpg|jpeg|png|gif|webp|svg)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'img/[name].[ext]'
-          }
-        }
+        test: /\.(png|jp(e*)g|gif|svg)$/,
+        use: [
+          { loader: 'url-loader', options: { limit: 10000 } },
+        ]
       },
     ]
   },
 
   plugins: [
-    // IMAGES + FONTS //
+    // copy IMAGES //
     new CopyWebpackPlugin([
-      { from: 'src/img', to: 'img' },
-      { from: 'src/fonts', to: 'fonts' },
+      { from: 'src/img', to: 'img' }
     ]),
 
     // HTML //

@@ -44,19 +44,17 @@ module.exports = {
         test: /\.(ttf|woff|woff2)$/,
         use: [{
           loader: 'file-loader',
-          options: { name: 'fonts/[name].[ext]' }
+          options: { name: 'fonts/[name]-[hash:8].[ext]' }
         }]
       },
 
       // IMAGES //
       {
-        test: /\.(ico|jpg|jpeg|png|gif|webp|svg)(\?.*)?$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: 'img/[name].[ext]'
-          }
-        }
+        test: /\.(png|jp(e*)g|gif|svg)$/,
+        use: [
+          { loader: 'url-loader',           options: { limit: 10000 } },
+          { loader: 'image-webpack-loader', options: { bypassOnDebug: true } }
+        ]
       },
     ]
   },
@@ -112,7 +110,6 @@ module.exports = {
     // IMAGES, FONTS, robot.txt
     new CopyWebpackPlugin([
       { from: 'src/img',   to: 'img' },
-      { from: 'src/fonts', to: 'fonts' },
       { from: 'robots.txt', to: '' },
     ]),
 
