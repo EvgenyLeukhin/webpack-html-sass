@@ -1,10 +1,34 @@
+@import "scss/fonts";
+@import "scss/vars";
+@import "scss/mixins";
+
+// libs
+@import "scss/bootstrap-reboot";
+
 $color: slateblue;
 
 body {
+  font-family: 'SF Pro Display';
   color: $color;
   display: flex;
+  // flex-direction: column;
 
   &.color {
     background: lightyellow;
   }
 }
+
+.box {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-svg { background-image: url(img/icons/notifications.svg); }
+
+.bg-jpeg { background-image: url(img/small.jpg); }

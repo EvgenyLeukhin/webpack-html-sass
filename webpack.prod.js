@@ -1,17 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 const WebpackBar = require('webpackbar');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
 
+  // input-output
   entry: './src/main.js',
-
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle-[hash:8].js',
@@ -21,11 +24,9 @@ module.exports = {
   module: {
     rules: [
       // JS //
-      {
-        test: /\.(js|jsx)$/,
+      { test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
-      },
+        use: 'babel-loader' },
 
       // CSS //
       {
@@ -37,13 +38,36 @@ module.exports = {
           'sass-loader'
         ]
       },
+
+      // FONTS //
+      {
+        test: /\.(ttf|woff|woff2)$/,
+        use: [{
+          loader: 'file-loader',
+          options: { name: 'fonts/[name].[ext]' }
+        }]
+      },
+
+      // IMAGES //
+      {
+        test: /\.(ico|jpg|jpeg|png|gif|webp|svg)(\?.*)?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: 'img/[name].[ext]'
+          }
+        }
+      },
     ]
   },
 
   optimization: {
     minimizer: [
-      new OptimizeCSSAssetsPlugin({}), // MIN CSS
-      new UglifyJsPlugin({             // MIN JS
+      // min CSS
+      new OptimizeCSSAssetsPlugin({}),
+
+      // min js
+      new UglifyJsPlugin({
         cache: true,
         parallel: true,
         uglifyOptions: {
@@ -55,12 +79,18 @@ module.exports = {
   },
 
   plugins: [
-    new WebpackBar(),         // Progress bar
-    new CleanWebpackPlugin(), // REMOVE 'dist' folder before new build
-    new CompressionPlugin({ algorithm: 'gzip' }), // GZIP Compression
+    // add progress bar
+    new WebpackBar(),
+
+    // remove 'dist/' before new build
+    new CleanWebpackPlugin(),
+
+     // gzip compression
+    new CompressionPlugin({ algorithm: 'gzip' }),
 
     // HTML //
     new HtmlWebpackPlugin({
+      title: 'Home page',
       template: __dirname + '/src/index.html',
       minify: {
         removeComments: true,
@@ -73,7 +103,25 @@ module.exports = {
       }
     }),
 
-    // CSS //
+    // css-bundle
     new MiniCssExtractPlugin({ filename: 'bundle-[hash:8].css' }),
+
+    // add jQuery
+    new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
+
+    // IMAGES, FONTS, robot.txt
+    new CopyWebpackPlugin([
+      { from: 'src/img',   to: 'img' },
+      { from: 'src/fonts', to: 'fonts' },
+      { from: 'robots.txt', to: '' },
+    ]),
+
+    // add favicons
+    new FaviconsWebpackPlugin({
+      logo: './src/img/icons/favicon.png',
+      prefix: 'icons-[hash:8]/',
+      statsFilename: 'iconstats-[hash:8].json',
+      background: '#fff'
+    }),
   ]
 };

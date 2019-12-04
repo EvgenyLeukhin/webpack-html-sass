@@ -1,3 +1,3 @@
 # webpack-sass-html
 
-Starter for MPA with sass and webpack.
+Starter for MPA by webpack with jquery and sass.
