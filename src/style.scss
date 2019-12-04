@@ -5,37 +5,64 @@
 // libs
 @import "scss/bootstrap-reboot";
 
-$color: slateblue;
+// layout
+@import "scss/layout/layout";
+
+// home-page
+@import "scss/home-page/top-block.scss";
+
 
 body {
-  font-family: 'SF Pro Display';
-  color: $color;
+  min-height: 100vh;
   display: flex;
-  font-weight: 600;
   flex-direction: column;
-  align-items: center;
-  padding: 15px;
-
-  &.color {
-    background: azure;
-  }
+  font-family: 'SF Pro Display', 'Montserrat';
 }
 
 .container {
-  display: flex;
+  width: $container-desktop-width;
+  min-height: 50px;
+  margin: auto;
+  outline: 1px solid red;
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  display: block;
-  border: 1px solid #ccc;
+.btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-flex;
+  min-width: 156px;
+  min-height: 45px;
+  align-items: center;
+  justify-content: center;
   border-radius: 5px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: $blue-color;
+  color: #fff;
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  border: 1px solid transparent;
+
+  &:hover {
+    text-decoration: none;
+    transition-property: border;
+    transition-duration: $transition-default-duration;
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 
-.bg-svg { background-image: url(img/icons/notifications.svg); }
+@media (max-width: $laptop-breakpoint) {
+  .container {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
-.bg-jpeg { background-image: url(img/small.jpg); }
+@media (max-width: $tablet-breakpoint) {
+  .btn {
+    min-width: 120px;
+    min-height: 35px;
+  }
+}
