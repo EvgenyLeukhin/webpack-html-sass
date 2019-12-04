@@ -59,7 +59,9 @@
     &__bottom {
       min-height: auto;
       padding-top: 15px;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
+
+    &::after { top: 70px; }
   }
 }

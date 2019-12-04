@@ -1,0 +1,38 @@
+.top-block {
+  font-family: Montserrat;
+  background-color: #1E2330;
+  background-repeat: no-repeat;
+  background-image: url(img/top-block.png);
+  background-position: center bottom;
+  color: #fff;
+  padding-top: 153px;
+  padding-bottom: 146px;
+
+  h2 {
+    max-width: 500px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 140%;
+    font-weight: 500;
+    margin-bottom: 42px;
+  }
+
+  a {
+    font-weight: 400;
+    min-width: 285px;
+    font-size: 14px;
+    justify-content: flex-end;
+    padding-right: 24px;
+    letter-spacing: 1.5px;
+    background-repeat: no-repeat;
+    background-image: url(img/icons/play.svg);
+    background-position: 17px center;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .top-block {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}

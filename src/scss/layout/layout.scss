@@ -1,2 +1,30 @@
 @import "header";
 @import "footer";
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'SF Pro Display', 'Montserrat';
+}
+
+.container {
+  width: $container-desktop-width;
+  min-height: 50px;
+  margin: auto;
+  outline: 1px solid red;
+
+  &.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .container {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

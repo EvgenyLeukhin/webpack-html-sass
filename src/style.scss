@@ -9,22 +9,7 @@
 @import "scss/layout/layout";
 
 // home-page
-@import "scss/home-page/top-block.scss";
-
-
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: 'SF Pro Display', 'Montserrat';
-}
-
-.container {
-  width: $container-desktop-width;
-  min-height: 50px;
-  margin: auto;
-  outline: 1px solid red;
-}
+@import "scss/home-page/01-top-block.scss";
 
 .btn {
   padding-left: 15px;
@@ -35,28 +20,24 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background: $blue-color;
+  background-color: $blue-color;
+  background-repeat: no-repeat;;
   color: #fff;
   font-family: 'SF Pro Display';
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  border: 1px solid transparent;
 
   &:hover {
     text-decoration: none;
-    transition-property: border;
+    transition-property: box-shadow;
     transition-duration: $transition-default-duration;
     color: #fff;
-    border: 1px solid #fff;
+    box-shadow: 0 0 5px 1px #fff;
   }
-}
 
-@media (max-width: $laptop-breakpoint) {
-  .container {
-    width: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  &:active {
+    filter: saturate(150%);
   }
 }
 
