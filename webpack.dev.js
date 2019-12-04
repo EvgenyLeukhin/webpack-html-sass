@@ -65,11 +65,19 @@ module.exports = {
       { from: 'src/img', to: 'img' }
     ]),
 
-    // HTML //
+    // HTML - MPA //
     new HtmlWebpackPlugin({
-      title: 'Home page',
+      title: 'Index page',
       favicon: './src/img/icons/favicon.ico',
       template: __dirname + '/src/index.html',
+      filename: 'index.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'Second page',
+      favicon: './src/img/icons/favicon.ico',
+      template: __dirname + '/src/second.html',
+      filename: 'second.html'
     }),
 
     // add jQuery

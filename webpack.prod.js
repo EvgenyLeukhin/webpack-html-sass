@@ -86,10 +86,25 @@ module.exports = {
      // gzip compression
     new CompressionPlugin({ algorithm: 'gzip' }),
 
-    // HTML //
+    // HTML - MPA //
     new HtmlWebpackPlugin({
-      title: 'Home page',
+      title: 'Index page',
       template: __dirname + '/src/index.html',
+      filename: 'index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        useShortDoctype: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeRedundantAttributes: true
+      }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Second page',
+      template: __dirname + '/src/second.html',
+      filename: 'second.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
