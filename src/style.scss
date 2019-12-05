@@ -9,25 +9,77 @@
 @import "scss/layout/layout";
 
 // home-page
-@import "scss/home-page/01-top.scss";
-@import "scss/home-page/02-welcome.scss";
+@import "scss/home-page/01-top";
+@import "scss/home-page/02-welcome";
+@import "scss/home-page/03-dashboard";
+@import "scss/home-page/04-it-risk-register";
 
 section {
   font-family: 'Montserrat';
 
+  // TITLE
   h2 {
     font-size: 26px;
     line-height: 36px;
     font-weight: 500;
+
+    &.with-ico {
+      display: inline-flex;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 70px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1px;
+        left: 0;
+        background: #0085FF;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-size: 26px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
   }
 
+  // PARAGRAPH
   p {
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
   }
+
+  // LIST
+  ul {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  ul.dot-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 15px;
+
+    li {
+      text-align: left;
+      flex-basis: 45%;
+      margin-bottom: 20px;
+      margin-right: 15px;
+    }
+  }
 }
 
+// BUTTON
 .btn {
   padding-left: 15px;
   padding-right: 15px;

@@ -1,0 +1,44 @@
+.it-risk-register {
+  margin-bottom: 50px;
+
+  .container {
+    padding-top: 15px;
+
+    h2 {
+      margin-bottom: 30px;
+      &::before { background-image: url(img/icons/risks.svg); }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+      list-style: none;
+
+      li {
+        background-repeat: no-repeat;
+        background-image: url(img/icons/pluses.svg);
+        background-size: 42px auto;
+        background-position: 27px 27px;
+        flex-basis: 23%;
+        padding: 90px 30px 25px;
+        border: 1px solid #DBDBDB;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .it-risk-register {
+    .container {
+      ul {
+        li {
+          flex-basis: 47%;
+        }
+      }
+    }
+  }
+}

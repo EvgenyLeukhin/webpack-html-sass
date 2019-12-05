@@ -1,6 +1,5 @@
-.welcome-block {
-  margin-top: 47px;
-  margin-bottom: 47px;
+.welcome {
+  margin-bottom: 97px;
 
   .container {
     padding: 80px 62px 90px;
@@ -9,43 +8,15 @@
     border-radius: 12px;
     background-image: url(img/02-welcome.jpg);
     background-position: right center;
-
-    .content {
-      max-width: 356px;
-    }
   }
+
+  .content { max-width: 356px; }
 
   p { margin-bottom: 26px; }
 }
 
 @media (max-width: $tablet-breakpoint) {
-  .welcome-block {
-    margin-top: 0;
-    margin-bottom: 0;
-
-    .container {
-      position: relative;
-      z-index: 1;
-      padding: 30px 15px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: block;
-        background: rgba(255, 255, 255, 0.5);
-      }
-
-      .content {
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        max-width: none;
-      }
-    }
+  .welcome {
+    .container.mask { padding: 30px 15px; }
   }
 }
