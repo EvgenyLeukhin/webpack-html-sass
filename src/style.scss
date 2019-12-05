@@ -43,7 +43,8 @@ section {
         content: "";
         display: block;
         position: absolute;
-        top: 1px;
+        top: 50%;
+        margin-top: -25px;
         left: 0;
         background: #0085FF;
         width: 50px;
