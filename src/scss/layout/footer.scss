@@ -56,12 +56,29 @@
 
 @media (max-width: $tablet-breakpoint) {
   .footer {
-    &__bottom {
+    .footer__top { padding-bottom: 0; }
+    .footer__bottom {
       min-height: auto;
       padding-top: 15px;
       padding-bottom: 10px;
     }
 
     &::after { top: 70px; }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .footer {
+    &__links {
+      li {
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &::after { top: 95px; }
   }
 }

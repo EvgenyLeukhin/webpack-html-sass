@@ -90,3 +90,45 @@
     }
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .header, .footer {
+
+    .header__content,
+    .footer__top {
+      flex-wrap: wrap;
+
+      .header__logo,
+      .footer__logo { order: 1; }
+
+      .header__nav,
+      .footer__nav {
+        order: 3;
+        display: flex;
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      .btn { order: 2; }
+    }
+  }
+
+  .header {
+    position: relative;
+
+    .header__content {
+      padding-bottom: 5px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

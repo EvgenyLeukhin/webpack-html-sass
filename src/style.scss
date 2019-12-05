@@ -13,6 +13,8 @@
 @import "scss/home-page/02-welcome";
 @import "scss/home-page/03-dashboard";
 @import "scss/home-page/04-it-risk-register";
+@import "scss/home-page/05-it-asset-register";
+@import "scss/home-page/06-treatments";
 
 section {
   font-family: 'Montserrat';
@@ -42,7 +44,7 @@ section {
         height: 50px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        background-size: 26px;
+        background-size: 30px;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -114,5 +116,15 @@ section {
   .btn {
     min-width: 120px;
     min-height: 35px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  section {
+    ul {
+      li {
+        flex-grow: 1;
+      }
+    }
   }
 }

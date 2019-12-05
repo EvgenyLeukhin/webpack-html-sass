@@ -1,9 +1,9 @@
 .dashboard {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   .container {
     padding-top: 45px;
-    padding-bottom: 33px;
+    padding-bottom: 50px;
     background-image: url(img/03-dashboard.png);
     background-position: right bottom;
 
@@ -19,6 +19,8 @@
 
     .container {
       background-image: url(img/03-dashboard-2.png);
+      background-size: cover;
+      background-position: center top;
 
       &.mask {
         position: relative;
