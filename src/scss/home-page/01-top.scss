@@ -2,7 +2,7 @@
   font-family: Montserrat;
   background-color: #1E2330;
   background-repeat: no-repeat;
-  background-image: url(img/top-block.png);
+  background-image: url(img/01-top.png);
   background-position: center bottom;
   color: #fff;
   padding-top: 153px;
@@ -10,11 +10,11 @@
 
   h2 {
     max-width: 500px;
+    margin-bottom: 42px;
     text-align: center;
     font-size: 36px;
-    line-height: 140%;
+    line-height: 50px;
     font-weight: 500;
-    margin-bottom: 42px;
   }
 
   a {
@@ -32,7 +32,14 @@
 
 @media (max-width: $tablet-breakpoint) {
   .top-block {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h2 {
+      max-width: none;
+      margin-bottom: 32px;
+      font-size: 26px;
+      line-height: 36px;
+    }
   }
 }

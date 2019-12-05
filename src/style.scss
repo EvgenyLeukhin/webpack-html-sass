@@ -9,7 +9,24 @@
 @import "scss/layout/layout";
 
 // home-page
-@import "scss/home-page/01-top-block.scss";
+@import "scss/home-page/01-top.scss";
+@import "scss/home-page/02-welcome.scss";
+
+section {
+  font-family: 'Montserrat';
+
+  h2 {
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
 
 .btn {
   padding-left: 15px;
