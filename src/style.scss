@@ -15,6 +15,7 @@
 @import "scss/home-page/04-it-risk-register";
 @import "scss/home-page/05-it-asset-register";
 @import "scss/home-page/06-treatments";
+@import "scss/home-page/08-policy";
 
 section {
   font-family: 'Montserrat';
@@ -122,9 +123,7 @@ section {
 @media (max-width: $mobile-breakpoint) {
   section {
     ul {
-      li {
-        flex-grow: 1;
-      }
+      li { flex-grow: 1; }
     }
   }
 }

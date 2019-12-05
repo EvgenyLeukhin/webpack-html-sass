@@ -1,4 +1,4 @@
-.treatments {
+.policy {
   margin-bottom: 25px;
 
   .container {
@@ -6,22 +6,25 @@
     justify-content: flex-end;
     padding-top: 45px;
     padding-bottom: 50px;
-    background-image: url(img/06-treatments.png);
+    background-image: url(img/08-policy.png);
     background-position: left center;
 
     .content { max-width: 630px; }
 
-    h2::before { background-image: url(img/icons/treatments.svg); }
+    h2::before { 
+      background-image: url(img/icons/policy.svg);
+      background-size: 25px;
+    }
   }
 }
 
 @media (max-width: 1175px) {
-  .treatments {
+  .policy {
     .content { max-width: none; }
 
     .container {
       display: block;
-      background-image: url(img/06-treatments-2.png);
+      background-image: url(img/08-policy-2.png);
       background-size: cover;
       background-position: center top;
 
