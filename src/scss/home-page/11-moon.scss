@@ -1,0 +1,69 @@
+.moon {
+  margin-bottom: 75px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(img/11-moon.png);
+    background-position: 90% top;
+
+    h2 {
+      flex-grow: 1;
+      padding-right: 70%;
+      margin-bottom: 175px;
+
+      &::before {
+        top: 12px;
+        margin-top: 0;
+        background-image: url(img/icons/moon.svg);
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      flex-basis: 49%;
+    }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .moon {
+    .container {
+      background-position: 90% top;
+      background-size: 40% auto;
+
+      h2 {
+        padding-right: 50%;
+        margin-bottom: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .moon {
+    margin-bottom: 0;
+
+    .container {
+      h2 {
+        margin-bottom: 16%;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .moon {
+    .container {
+      background-size: contain;
+      background-position: center;
+
+      h2 {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
