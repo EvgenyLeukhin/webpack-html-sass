@@ -108,6 +108,12 @@
         flex-basis: 100%;
         justify-content: center;
         margin-top: 10px;
+
+        ul {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
       }
 
       .btn { order: 2; }
