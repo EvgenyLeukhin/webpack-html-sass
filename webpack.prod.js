@@ -10,6 +10,16 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
+const minifyHtmlOptions = {
+  removeComments: true,
+  collapseWhitespace: true,
+  conservativeCollapse: true,
+  useShortDoctype: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  removeRedundantAttributes: true
+};
+
 module.exports = {
   mode: 'production',
 
@@ -87,33 +97,52 @@ module.exports = {
     new CompressionPlugin({ algorithm: 'gzip' }),
 
     // HTML - MPA //
+    // index.html
     new HtmlWebpackPlugin({
-      title: 'Index page',
+      title: 'GRC | Home page',
       template: __dirname + '/src/index.html',
       filename: 'index.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        conservativeCollapse: true,
-        useShortDoctype: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        removeRedundantAttributes: true
-      }
+      minify: minifyHtmlOptions
     }),
+
+    // solution.html
     new HtmlWebpackPlugin({
-      title: 'Second page',
-      template: __dirname + '/src/second.html',
-      filename: 'second.html',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        conservativeCollapse: true,
-        useShortDoctype: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        removeRedundantAttributes: true
-      }
+      title: 'GRC | Solution page',
+      template: __dirname + '/src/solution.html',
+      filename: 'solution.html',
+      minify: minifyHtmlOptions
+    }),
+
+    // contact.html
+    new HtmlWebpackPlugin({
+      title: 'GRC | Contact page',
+      template: __dirname + '/src/contact.html',
+      filename: 'contact.html',
+      minify: minifyHtmlOptions
+    }),
+
+    // about.html
+    new HtmlWebpackPlugin({
+      title: 'GRC | About page',
+      template: __dirname + '/src/about.html',
+      filename: 'about.html',
+      minify: minifyHtmlOptions
+    }),
+
+    // service.html
+    new HtmlWebpackPlugin({
+      title: 'GRC | Terms of service',
+      template: __dirname + '/src/service.html',
+      filename: 'service.html',
+      minify: minifyHtmlOptions
+    }),
+
+    // privacy.html
+    new HtmlWebpackPlugin({
+      title: 'GRC | Privacy policy',
+      template: __dirname + '/src/privacy.html',
+      filename: 'privacy.html',
+      minify: minifyHtmlOptions
     }),
 
     // css-bundle

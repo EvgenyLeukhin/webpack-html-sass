@@ -67,17 +67,45 @@ module.exports = {
 
     // HTML - MPA //
     new HtmlWebpackPlugin({
-      title: 'Index page',
+      title: 'GRC | Home page',
       favicon: './src/img/icons/favicon.ico',
       template: __dirname + '/src/index.html',
       filename: 'index.html'
     }),
 
     new HtmlWebpackPlugin({
-      title: 'Second page',
+      title: 'GRC | Solution page',
       favicon: './src/img/icons/favicon.ico',
-      template: __dirname + '/src/second.html',
-      filename: 'second.html'
+      template: __dirname + '/src/solution.html',
+      filename: 'solution.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'GRC | About page',
+      favicon: './src/img/icons/favicon.ico',
+      template: __dirname + '/src/about.html',
+      filename: 'about.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'GRC | Contact page',
+      favicon: './src/img/icons/favicon.ico',
+      template: __dirname + '/src/contact.html',
+      filename: 'contact.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'GRC | Terms of service',
+      favicon: './src/img/icons/favicon.ico',
+      template: __dirname + '/src/service.html',
+      filename: 'service.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'GRC | Privacy policy',
+      favicon: './src/img/icons/favicon.ico',
+      template: __dirname + '/src/privacy.html',
+      filename: 'privacy.html'
     }),
 
     // add jQuery
