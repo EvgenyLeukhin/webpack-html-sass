@@ -1,0 +1,142 @@
+.about-goal {
+  margin-bottom: 70px;
+
+  .container {
+    h2 {
+      margin-bottom: 29px;
+      &::before { background-image: url(img/icons/risks.svg); }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      & > * {
+        flex-basis: 49%;
+        background-color: #F1F2F8;
+        border-radius: 12px;
+        padding: 20px 30px;
+        padding-bottom: 25px;
+        border: 1px solid #c4c4c4;
+      }
+
+      .left {
+        background-repeat: no-repeat;
+        padding-right: 22%;
+        background-image: url(img/03-about-goal.png);
+        background-position: right bottom;
+      }
+
+      .right {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        h3 {
+          flex-grow: 1;
+          flex-shrink: 0;
+          flex-basis: 100%;
+        }
+
+        p {
+          flex-basis: 50%;
+        }
+
+        .btn {
+          align-self: flex-start;
+          margin-left: 50px;
+          margin-top: 30px;
+          padding-left: 35px;
+          padding-right: 35px;
+        }
+
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .about-goal {
+    .container {
+      .content {
+        .left {
+          background-position: 130% bottom;
+        }
+
+        .right {
+          p {
+            flex-basis: auto;
+            margin-bottom: 20px;
+          }
+          .btn {
+            margin-top: 0;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-goal {
+    .container {
+      .content {
+        .left {
+          background-position: 160% bottom;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about-goal {
+    .container {
+      .content {
+        .left {
+          background-position: center bottom;
+          padding-right: 30px;
+          padding-bottom: 40%;
+        }
+
+        .right {
+          p {
+            flex-basis: auto;
+            margin-bottom: 20px;
+          }
+          .btn {
+            flex-grow: 1;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .about-goal {
+    .container {
+      .content {
+        flex-direction: column;
+
+        .left {
+          padding-bottom: 50%;
+        }
+
+        & > * {
+          flex-basis: auto;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

@@ -26,6 +26,7 @@
 // about-page
 @import "scss/about-page/01-about-top";
 @import "scss/about-page/02-about-established";
+@import "scss/about-page/03-about-goal";
 
 section {
   font-family: 'Montserrat';
@@ -121,7 +122,7 @@ section {
     transition-property: box-shadow;
     transition-duration: $transition-default-duration;
     color: #fff;
-    box-shadow: 0 0 5px 1px #fff;
+    box-shadow: 0 0 5px 1px $blue-color;
   }
 
   &:active {
