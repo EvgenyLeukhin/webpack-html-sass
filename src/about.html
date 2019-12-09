@@ -7,7 +7,7 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-  <header class="header">
+  <header class="header light">
     <div class="container">
       <div class="header__content">
         <a href="index.html" class="header__logo">GRC-NOW</a>
@@ -28,8 +28,12 @@
 
   <main>
     <div class="container">
-      <h2 style="padding-top: 20px;">About page - TODO</h2>
-
+      <nav>
+        <ul class="breadcrunbs">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="#">About</a></li>
+        </ul>
+      </nav>
     </div>
   </main>
 

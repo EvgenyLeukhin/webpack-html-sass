@@ -120,6 +120,45 @@ section {
   }
 }
 
+.breadcrunbs {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  li {
+    padding-right: 35px;
+    background-image: url(img/icons/arrow-right.svg);
+    background-position: 79% center;
+    background-repeat: no-repeat;
+
+    &.active {
+      padding-right: 0;
+      background-image: none;
+
+      a {
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+
+    a {
+      font-family: 'Montserrat';
+      color: #737373;
+      font-size: 14px;
+      line-height: 20px;
+
+      &:hover {
+        transition-property: color;
+        transition-duration: $transition-default-duration;
+        text-decoration: none;
+        color: $blue-color;
+      }
+    }
+  }
+}
+
 @media (max-width: $tablet-breakpoint) {
   .btn {
     min-width: 120px;
