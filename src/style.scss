@@ -23,6 +23,9 @@
 @import "scss/home-page/11-moon";
 @import "scss/home-page/12-welcome-2";
 
+// about-page
+@import "scss/about-page/01-about-top";
+
 section {
   font-family: 'Montserrat';
 
@@ -31,6 +34,11 @@ section {
     font-size: 26px;
     line-height: 36px;
     font-weight: 500;
+
+    &.big {
+      font-size: 36px;
+      line-height: 50px;
+    }
 
     &.with-ico {
       display: inline-flex;
@@ -120,12 +128,16 @@ section {
   }
 }
 
-.breadcrunbs {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
+nav.breadcrumbs {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 
   li {
     padding-right: 35px;

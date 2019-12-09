@@ -2,18 +2,13 @@
 @import "footer";
 
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   font-family: 'Montserrat', 'SF Pro Display';
 }
 
 .container {
   width: $container-desktop-width;
   background-repeat: no-repeat;
-  min-height: 50px;
   margin: auto;
-  // outline: 1px solid red;
 
   &.center {
     display: flex;
