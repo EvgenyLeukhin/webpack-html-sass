@@ -25,6 +25,7 @@
 
 // about-page
 @import "scss/about-page/01-about-top";
+@import "scss/about-page/02-about-established";
 
 section {
   font-family: 'Montserrat';
@@ -176,6 +177,10 @@ nav.breadcrumbs {
   .btn {
     min-width: 120px;
     min-height: 35px;
+  }
+
+  nav.breadcrumbs {
+    margin-bottom: 20px;
   }
 }
 

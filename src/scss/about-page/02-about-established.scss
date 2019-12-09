@@ -1,0 +1,51 @@
+.about-established {
+  margin-bottom: 25px;
+
+  p { margin-bottom: 10px; }
+
+  .container {
+    h2 {
+      margin-bottom: 25px;
+
+      &::before { background-image: url(img/icons/it-assets.svg); }
+    }
+
+    .content {
+      padding: 28px 30px;
+      padding-right: 63%;
+      border-radius: 12px;
+      background: #F1F2F8;
+      border: 1px solid #EBEBEB;
+      background-image: url(img/02-about-established.png);
+      background-position: right top;
+      background-repeat: no-repeat;
+
+      p { margin-bottom: 0; }
+    }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .about-established {
+    .container {
+      .content {
+        padding-right: 50%;
+        background-size: 45% auto;
+        background-position: right center;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .about-established {
+    .container {
+      .content {
+        padding-right: 30px;
+        padding-bottom: 25%;
+        background-size: 95% auto;
+        background-position: center bottom;
+      }
+    }
+  }
+}
