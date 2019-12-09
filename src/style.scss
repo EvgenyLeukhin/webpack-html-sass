@@ -140,6 +140,7 @@ section {
       a {
         pointer-events: none;
         cursor: default;
+        color: $blue-color;
       }
     }
 
@@ -153,7 +154,7 @@ section {
         transition-property: color;
         transition-duration: $transition-default-duration;
         text-decoration: none;
-        color: $blue-color;
+        color: #000;
       }
     }
   }

@@ -21,11 +21,7 @@ body {
     align-items: center;
   }
 
-  &.small {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    width: $container-small-width;
-  }
+  &.small { width: $container-small-width; }
 }
 
 @media (max-width: $laptop-breakpoint) {
