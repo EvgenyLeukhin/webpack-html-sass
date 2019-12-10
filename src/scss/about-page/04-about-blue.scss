@@ -10,9 +10,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 
-    & > * {
-      flex-basis: 33%;
-    }
+    & > * { flex-basis: 33%; }
 
     .left, .center {
       position: relative;
@@ -65,6 +63,8 @@
 
 @media (max-width: $laptop-breakpoint) {
   .about-blue {
+    margin-bottom: 0;
+
     .container {
       border-radius: 0;
 
@@ -110,9 +110,7 @@
       padding-right: 15px;
       flex-direction: column;
 
-      & > * {
-        margin-bottom: 15px;
-      }
+      & > * { margin-bottom: 15px; }
 
       .right {
         padding-top: 10px;

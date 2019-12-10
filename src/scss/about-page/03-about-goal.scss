@@ -4,6 +4,7 @@
   .container {
     h2 {
       margin-bottom: 29px;
+
       &::before { background-image: url(img/icons/risks.svg); }
     }
 
@@ -38,9 +39,7 @@
           flex-basis: 100%;
         }
 
-        p {
-          flex-basis: 50%;
-        }
+        p { flex-basis: 50%; }
 
         .btn {
           align-self: flex-start;
@@ -49,7 +48,6 @@
           padding-left: 35px;
           padding-right: 35px;
         }
-
       }
 
       h3 {
@@ -74,6 +72,7 @@
             flex-basis: auto;
             margin-bottom: 20px;
           }
+
           .btn {
             margin-top: 0;
             margin-left: 0;
@@ -88,9 +87,7 @@
   .about-goal {
     .container {
       .content {
-        .left {
-          background-position: 160% bottom;
-        }
+        .left { background-position: 160% bottom; }
       }
     }
   }
@@ -111,6 +108,7 @@
             flex-basis: auto;
             margin-bottom: 20px;
           }
+
           .btn {
             flex-grow: 1;
             padding-left: 15px;
@@ -128,9 +126,7 @@
       .content {
         flex-direction: column;
 
-        .left {
-          padding-bottom: 50%;
-        }
+        .left { padding-bottom: 50%; }
 
         & > * {
           flex-basis: auto;
