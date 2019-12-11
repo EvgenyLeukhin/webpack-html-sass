@@ -1,0 +1,39 @@
+.solution-2cols {
+  margin-bottom: 50px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      flex-basis: 48%;
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+      }
+
+      h3 {
+        margin-top: 25px;
+        margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  section.solution-2cols[class] {
+    .container {
+      flex-direction: column;
+      padding-bottom: 0;
+
+      & > div {
+        &.left { margin-bottom: 30px; }
+        &.right { margin-bottom: 0; }
+      }
+    }
+  }
+}

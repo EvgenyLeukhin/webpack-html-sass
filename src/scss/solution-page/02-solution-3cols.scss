@@ -1,0 +1,64 @@
+.solution-3cols {
+  margin-bottom: 65px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      flex-basis: 31%;
+      background-color: #F1F2F8;
+      padding-left: 30px;
+      padding-right: 40px;
+      padding-bottom: 20px;
+      padding-top: 93px;
+      border-radius: 12px;
+
+      &.left h3::before  {
+        background-image: url(img/icons/policy3.svg);
+        background-size: 22px auto;
+      }
+      &.center h3::before  { background-image: url(img/icons/exceptions.svg); }
+      &.right h3::before  { background-image: url(img/icons/risks-blue.svg); }
+
+      h3 {
+        position: relative;
+        font-size: 20px;
+        line-height: 28px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -70px;
+          left: 0;
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-size: 30px auto;
+          background-color: #fff;
+          box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+          border-radius: 10px;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      p {
+        line-height: 21px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .solution-3cols {
+    .container {
+      flex-direction: column;
+
+      & > div {
+
+      }
+    }
+  }
+}
