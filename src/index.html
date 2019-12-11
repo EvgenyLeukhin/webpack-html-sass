@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
   <header class="header">
@@ -21,7 +22,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="btn">Get started</a>
+        <a href="#" class="btn" data-izimodal-open="#modal-get-started">Get started</a>
       </div>
     </div>
   </header>
@@ -39,7 +40,7 @@
         <div class="content">
           <h2>Welcome to GRC-Now</h2>
           <p>Providers of innovative, yet an effective IT GRC Solution to discerned Customers</p>
-          <a class="btn" href="#">Get started</a>
+          <a class="btn" href="#" data-izimodal-open="#modal-get-started">Get started</a>
         </div>
       </div>
     </section>
@@ -160,7 +161,7 @@
         <div class="content">
           <h2>Welcome to GRC-Now</h2>
           <p>Providers of innovative, yet an effective IT GRC Solution to discerned Customers</p>
-          <a class="btn" href="#">Get started</a>
+          <a class="btn" href="#" data-izimodal-open="#modal-get-started">Get started</a>
         </div>
       </div>
     </section>
@@ -180,7 +181,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="btn">Get started</a>
+        <a href="#" class="btn" data-izimodal-open="#modal-get-started">Get started</a>
       </div>
 
       <div class="footer__bottom">
@@ -195,5 +196,32 @@
   </footer>
 
   <div id="modal-youtube"></div>
+
+  <div id="modal-get-started">
+
+    <form method="POST" class="modal-get-started">
+      <h2>Get started</h2>
+      <div class="wrapper">
+        <div>
+          <label for="modal-get-started__name">Name</label>
+          <input type="text" id="modal-get-started__name" placeholder="Enter name">
+        </div>
+
+        <div>
+          <label for="modal-get-started__email">Email</label>
+          <input type="text" id="modal-get-started__email" placeholder="Enter email">
+        </div>
+      </div>
+
+      <!-- <div class="g-recaptcha" data-sitekey="{YOUR-SITE-KEY-HERE}"></div> -->
+      <!-- <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha"> -->
+
+      <div class="right">
+        <input class="btn" type="submit" value="Get started">
+      </div>
+
+      <p class="results"></p>
+    </form>
+  </div>
 </body>
 </html>

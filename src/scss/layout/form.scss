@@ -1,0 +1,51 @@
+.modal-get-started {
+
+  h2 {
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      flex-basis: 45%;
+
+      input {
+        display: inline-block;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #a6a6a6;
+        box-shadow: 0;
+        outline: 0;
+
+        &:focus {
+          border-bottom: 2px solid $blue-color;
+        }
+      }
+    }
+  }
+
+  label {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+
+  input[type="submit"] {
+    margin-top: 30px;
+    margin-left: auto;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .g-recaptcha {
+    margin-top: 30px;
+  }
+}
