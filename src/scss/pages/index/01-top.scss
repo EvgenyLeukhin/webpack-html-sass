@@ -1,0 +1,46 @@
+.top {
+  font-family: Montserrat;
+  background-color: #1E2330;
+  background-repeat: no-repeat;
+  background-image: url(../../img/01-top.png);
+  background-position: center bottom;
+  color: #fff;
+  padding-top: 153px;
+  padding-bottom: 146px;
+  margin-bottom: 47px;
+
+  h2 {
+    max-width: 500px;
+    margin-bottom: 42px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 500;
+  }
+
+  a {
+    font-weight: 400;
+    min-width: 285px;
+    font-size: 14px;
+    justify-content: flex-end;
+    padding-right: 24px;
+    letter-spacing: 1.5px;
+    background-repeat: no-repeat;
+    background-image: url(../../img/icons/play.svg);
+    background-position: 17px center;
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .top {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    h2 {
+      max-width: none;
+      margin-bottom: 32px;
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+}

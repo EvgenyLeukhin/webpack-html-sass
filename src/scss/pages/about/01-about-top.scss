@@ -1,0 +1,51 @@
+.about-top {
+  margin-bottom: 65px;
+
+  h2 { margin-bottom: 17px; }
+
+  p { margin-bottom: 10px; }
+
+  .container {
+    padding-bottom: 30px;
+    background-image: url(../../img/01-about-top.png);
+    background-position: right bottom;
+
+    .content { max-width: 500px; }
+  }
+}
+
+@media (max-width: $laptop-breakpoint) {
+  .about-top {
+    .container {
+      background-position: 95% bottom;
+    }
+  }
+}
+
+@media (max-width: 1111px) {
+  .about-top {
+    .container {
+      background-position: 95% center;
+      background-size: 45% auto;
+
+      .content { max-width: 50%; }
+    }
+  }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  section.about-top[class] {
+    margin-bottom: 20px;
+
+    .container {
+      padding-top: 0;
+      background-size: 95% auto;
+      background-position: center bottom;
+
+      .content {
+        max-width: none;
+        padding-bottom: 47%;
+      }
+    }
+  }
+}

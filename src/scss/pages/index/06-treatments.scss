@@ -1,0 +1,51 @@
+.treatments {
+  margin-bottom: 25px;
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    background-image: url(../../img/06-treatments.png);
+    background-position: left center;
+
+    .content { max-width: 630px; }
+
+    h2::before { background-image: url(../../img/icons/treatments.svg); }
+  }
+}
+
+@media (max-width: 1175px) {
+  .treatments {
+    .content { max-width: none; }
+
+    .container {
+      display: block;
+      background-image: url(../../img/06-treatments-2.png);
+      background-size: cover;
+      background-position: center top;
+
+      &.mask {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: block;
+          background: rgba(255, 255, 255, 0.65);
+        }
+
+        .content {
+          position: relative;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.welcome2 {
+  margin-bottom: 97px;
+
+  .container {
+    padding: 40px 25px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-image: url(../../img/12-welcome2.png);
+    background-position: right bottom;
+    background-size: 345px auto;
+  }
+
+  .content { max-width: 356px; }
+
+  p { margin-bottom: 26px; }
+}
+
+@media (max-width: $tablet-breakpoint) {
+  .welcome2 {
+    .container.mask { padding: 30px 15px; }
+  }
+}

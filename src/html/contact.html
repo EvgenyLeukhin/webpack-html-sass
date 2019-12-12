@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body class="contact">
+  <header class="header light">
+    <div class="container">
+      <div class="header__content">
+        <a href="index.html" class="header__logo">GRC-NOW</a>
+
+        <nav class="header__nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="solution.html">Solution</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn js-modal-get-started">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="contact-page">
+      <div class="container mask">
+        <div class="content">
+          <h2>Contact</h2>
+          <p>We empower your organization to effectively and efficiently Govern the Information Technology Investments through our professional IT GRC Solution and Consulting Services.</p>
+
+          <p class="mb24">Call us today to schedule an non-obligatory advisory session</p>
+
+          <div class="btn-container">
+            <a href="tel:+19496487068" class="btn white btn__phone">949-648-7068</a>
+            <a href="mailto:contact@grc-now.com" class="btn white btn__email">contact@grc-now.com</a>
+          </div>
+
+          <hr>
+
+          <address>
+            <p>ecure First Global<br>
+              695 Town Center Drive. Suite 1200<br>
+              ​Costa Mesa, CA 92626</p>
+          </address>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="index.html" class="footer__logo">GRC-NOW</a>
+
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="solution.html">Solution</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="btn js-modal-get-started">Get started</a>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__links">
+          <li><a href="service.html">Terms of service</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+        </ul>
+
+        <span class="footer__copyright">© 2019 GRC-NOW</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal-get-started" class="modal-get-started">
+    <form
+      action=""
+      method="POST"
+      id="modal-get-started"
+      class="modal-get-started"
+      autocomplete="off"
+    >
+      <h2>Get started</h2>
+      <div class="wrapper">
+        <div>
+          <label for="modal-get-started__name">Name</label>
+          <input
+            type="text"
+            id="modal-get-started__name"
+            name="name"
+            placeholder="Enter name"
+            pattern="[A-Za-z0-9]+"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="modal-get-started__email">Email</label>
+          <input
+            type="text"
+            id="modal-get-started__email"
+            name="email"
+            placeholder="Enter email"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            required
+          >
+        </div>
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="{YOUR-SITE-KEY-HERE}"></div>
+      <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+
+      <div class="right">
+        <input id="modal-get-started__submit" type="submit" class="btn" value="Get started">
+      </div>
+
+      <div id="modal-get-started__result"></div>
+    </form>
+  </div>
+</body>
+</html>

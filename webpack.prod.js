@@ -24,10 +24,17 @@ module.exports = {
   mode: 'production',
 
   // input-output
-  entry: './src/main.js',
+  entry: {
+    index:    './src/js/index.js',
+    solution: './src/js/solution.js',
+    about:    './src/js/about.js',
+    contact:  './src/js/contact.js',
+    service:  './src/js/service.js',
+    privacy:  './src/js/privacy.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle-[hash:8].js',
+    filename: '[name].bundle-[hash:8].js',
     publicPath: ''
   },
 
@@ -102,7 +109,8 @@ module.exports = {
       title: 'GRC | Home page',
       template: __dirname + '/src/index.html',
       filename: 'index.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['index']
     }),
 
     // solution.html
@@ -110,7 +118,8 @@ module.exports = {
       title: 'GRC | Solution page',
       template: __dirname + '/src/solution.html',
       filename: 'solution.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['solution']
     }),
 
     // contact.html
@@ -118,7 +127,8 @@ module.exports = {
       title: 'GRC | Contact page',
       template: __dirname + '/src/contact.html',
       filename: 'contact.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['contact']
     }),
 
     // about.html
@@ -126,7 +136,8 @@ module.exports = {
       title: 'GRC | About page',
       template: __dirname + '/src/about.html',
       filename: 'about.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['about']
     }),
 
     // service.html
@@ -134,7 +145,8 @@ module.exports = {
       title: 'GRC | Terms of service',
       template: __dirname + '/src/service.html',
       filename: 'service.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['service']
     }),
 
     // privacy.html
@@ -142,11 +154,12 @@ module.exports = {
       title: 'GRC | Privacy policy',
       template: __dirname + '/src/privacy.html',
       filename: 'privacy.html',
-      minify: minifyHtmlOptions
+      minify: minifyHtmlOptions,
+      chunks: ['privacy']
     }),
 
     // css-bundle
-    new MiniCssExtractPlugin({ filename: 'bundle-[hash:8].css' }),
+    new MiniCssExtractPlugin({ filename: '[name].bundle-[hash:8].css' }),
 
     // add jQuery
     new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
