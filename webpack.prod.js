@@ -20,17 +20,21 @@ const minifyHtmlOptions = {
   removeRedundantAttributes: true
 };
 
+const jsPath = './src/js';
+const htmlPath = `${__dirname}/src/html`;
+const favIconPath = './src/img/icons';
+
 module.exports = {
   mode: 'production',
 
   // input-output
   entry: {
-    index:    './src/js/index.js',
-    solution: './src/js/solution.js',
-    about:    './src/js/about.js',
-    contact:  './src/js/contact.js',
-    service:  './src/js/service.js',
-    privacy:  './src/js/privacy.js'
+    index:    `${jsPath}/index.js`,
+    solution: `${jsPath}/solution.js`,
+    about:    `${jsPath}/about.js`,
+    contact:  `${jsPath}/contact.js`,
+    service:  `${jsPath}/service.js`,
+    privacy:  `${jsPath}/privacy.js`
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -107,7 +111,7 @@ module.exports = {
     // index.html
     new HtmlWebpackPlugin({
       title: 'GRC | Home page',
-      template: __dirname + '/src/index.html',
+      template: `${htmlPath}/index.html`,
       filename: 'index.html',
       minify: minifyHtmlOptions,
       chunks: ['index']
@@ -116,7 +120,7 @@ module.exports = {
     // solution.html
     new HtmlWebpackPlugin({
       title: 'GRC | Solution page',
-      template: __dirname + '/src/solution.html',
+      template: `${htmlPath}/solution.html`,
       filename: 'solution.html',
       minify: minifyHtmlOptions,
       chunks: ['solution']
@@ -125,7 +129,7 @@ module.exports = {
     // contact.html
     new HtmlWebpackPlugin({
       title: 'GRC | Contact page',
-      template: __dirname + '/src/contact.html',
+      template: `${htmlPath}/contact.html`,
       filename: 'contact.html',
       minify: minifyHtmlOptions,
       chunks: ['contact']
@@ -134,7 +138,7 @@ module.exports = {
     // about.html
     new HtmlWebpackPlugin({
       title: 'GRC | About page',
-      template: __dirname + '/src/about.html',
+      template: `${htmlPath}/about.html`,
       filename: 'about.html',
       minify: minifyHtmlOptions,
       chunks: ['about']
@@ -143,7 +147,7 @@ module.exports = {
     // service.html
     new HtmlWebpackPlugin({
       title: 'GRC | Terms of service',
-      template: __dirname + '/src/service.html',
+      template: `${htmlPath}/contact.html`,
       filename: 'service.html',
       minify: minifyHtmlOptions,
       chunks: ['service']
@@ -152,7 +156,7 @@ module.exports = {
     // privacy.html
     new HtmlWebpackPlugin({
       title: 'GRC | Privacy policy',
-      template: __dirname + '/src/privacy.html',
+      template: `${htmlPath}/privacy.html`,
       filename: 'privacy.html',
       minify: minifyHtmlOptions,
       chunks: ['privacy']
@@ -172,7 +176,7 @@ module.exports = {
 
     // add favicons
     new FaviconsWebpackPlugin({
-      logo: './src/img/icons/favicon.png',
+      logo: `${favIconPath}/favicon.png`,
       publicPath: './',
       prefix: '',
       statsFilename: 'iconstats-[hash:8].json',

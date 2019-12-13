@@ -199,12 +199,13 @@
 
   <div id="modal-get-started" class="modal-get-started">
     <div class="modal-get-started__close"></div>
+
     <form
       action=""
       method="POST"
       id="modal-get-started__form"
       class="modal-get-started__form"
-      autocomplete="off"
+      autocomplete="on"
     >
       <h2>Get started</h2>
       <div class="wrapper">
@@ -233,15 +234,21 @@
         </div>
       </div>
 
-      <div class="g-recaptcha" data-sitekey="{YOUR-SITE-KEY-HERE}"></div>
-      <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha">
+      <!-- eugeny.leukhin@stellarsolvers.com -->
+      <!-- sitekey: 6LdQiscUAAAAAOJucWIvRM-Z6MKGyoS2XW78T7mh -->
+
+      <div class="g-recaptcha" data-sitekey="6LdQiscUAAAAAOJucWIvRM-Z6MKGyoS2XW78T7mh"></div>
 
       <div class="right">
         <input id="modal-get-started__submit" type="submit" class="btn" value="Get started">
       </div>
-
-      <div id="modal-get-started__result"></div>
     </form>
+
+    <div class="modal-get-started__success">
+      <h2>Thank you!</h2>
+      <p>Our manager will contact you by email</p>
+      <a href="#" class="js-send-another-one">Send another one</a>
+    </div>
   </div>
 </body>
 </html>

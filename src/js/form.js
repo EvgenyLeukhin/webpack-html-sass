@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-  // open #modal-get-started
+  // modal
   $('.js-modal-get-started').on('click', e => {
     e.preventDefault();
 
@@ -23,27 +23,31 @@ $(document).ready(() => {
   });
 
 
-  // js-get-started-form
-  // $('#modal-get-started').iziModal({
-  //   width: 780,
-  //   padding: '40px 60px',
-  //   radius: 12,
-  // });
-
-
   // form
-  const form = $('#modal-get-started');
+  const formModal = $('#modal-get-started');
+  const sendAnotherOne = $('.js-send-another-one');
 
-  form.on('submit', (e) => {
+  formModal.on('submit', (e) => {
 
     const name = $('#modal-get-started__name').val();
     const email = $('#modal-get-started__email').val();
+    const recatcha = $('#g-recaptcha-response').val();
 
-    if (name && email) {
-      console.log(`name: ${name}, email: ${email}`);
-    } else {
-      alert('Fill the form!');
+    if (name && email && recatcha) {
+      // if ok
+      // need a request
       e.preventDefault();
+      formModal.addClass('success');
+    } else {
+      // if not ok
+      e.preventDefault();
+      alert('Fill the form!');
     }
   });
+
+  // send another one
+  sendAnotherOne.on('click', () => {
+    formModal.removeClass('success');
+  });
 });
+

@@ -14,6 +14,21 @@
   border: 1px solid #ccc;
   background-color: #fff;
 
+  &.show { display: flex; }
+
+  &.success {
+    height: 220px;
+    margin-top: -110px;
+
+    .modal-get-started__form    { display: none; }
+    .modal-get-started__success { display: block; }
+  }
+
+  &__success {
+    display: none;
+    text-align: center;
+  }
+
   &__close {
     position: absolute;
     top: -35px;
@@ -26,8 +41,6 @@
     background-image: url(../../img/icons/delete.svg);
     cursor: pointer;
   }
-
-  &.show { display: flex; }
 
   h2 {
     font-size: 36px;
