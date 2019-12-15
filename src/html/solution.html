@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= htmlWebpackPlugin.options.title %></title>
-  <script src="https://www.google.com/recaptcha/api.js?render=_reCAPTCHA_6LeveccUAAAAAMEwp-a9ymrHmM2m3r6XVqu1b1Xf"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body>
@@ -160,10 +160,10 @@
         </div>
       </div>
 
-      <!-- eugeny.leukhin@stellarsolvers.com -->
-      <!-- sitekey: 6LdQiscUAAAAAOJucWIvRM-Z6MKGyoS2XW78T7mh -->
+      <!-- eugeny.leukhin@stellarsolvers.com https://evgenyleukhin.github.io/webpack-html-sass/ -->
+      <!-- sitekey: 6LffjccUAAAAAGU7F9nJCealLAGMZ1H68RKwCj-0 -->
 
-      <div class="g-recaptcha" data-sitekey="6LdQiscUAAAAAOJucWIvRM-Z6MKGyoS2XW78T7mh"></div>
+      <div class="g-recaptcha" data-sitekey="6LffjccUAAAAAGU7F9nJCealLAGMZ1H68RKwCj-0"></div>
 
       <div class="right">
         <input id="modal-get-started__submit" type="submit" class="btn" value="Get started">
@@ -176,5 +176,12 @@
       <a href="#" class="js-send-another-one">Send another one</a>
     </div>
   </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
 </body>
 </html>

@@ -32,14 +32,34 @@ $(document).ready(() => {
     const name = $('#modal-get-started__name').val();
     const email = $('#modal-get-started__email').val();
     const recatcha = $('#g-recaptcha-response').val();
+    const action = 'https://';
 
+    // if ok
     if (name && email && recatcha) {
-      // if ok
       // need a request
       e.preventDefault();
-      formModal.addClass('success');
+
+      $.ajax({
+        url: action,
+        crossDomain: true,
+        headers: { 'Access-Control-Allow-Origin': '*' },
+        data: { name, email },
+        type: "POST",
+
+        // if request is ok (200)
+        success: () => formModal.addClass('success'),
+
+        // if request is not ok
+        error: () => alert('Something is wrong!'),
+        // statusCode: {
+        //   200: function() {
+        //     formModal.addClass('success');
+        //   },
+        // }
+      });
+
+      // if validation is not ok
     } else {
-      // if not ok
       e.preventDefault();
       alert('Fill the form!');
     }
@@ -50,4 +70,3 @@ $(document).ready(() => {
     formModal.removeClass('success');
   });
 });
-

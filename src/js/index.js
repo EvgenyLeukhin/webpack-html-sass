@@ -5,8 +5,8 @@ import './form';
 import iziModal from 'izimodal/js/iziModal';
 $.fn.iziModal = iziModal;
 
+// #modal-youtube
 $(document).ready(() => {
-  // #modal-youtube
   $('#modal-youtube').iziModal({
     title: 'What is GRC?',
     headerColor: 'black',
