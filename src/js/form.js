@@ -38,29 +38,30 @@ $(document).ready(() => {
     if (name && email && recatcha) {
       // need a request
       e.preventDefault();
+      formModal.addClass('success');
 
-      const myJSObject = {
-        "formPath": "/forms/u/1/d/e/1FAIpQLSc6BWDbWZbiJdCdJ_tQemw2KTimBWFp_gvbe84AdHSYmB7ETQ/formResponse",
-        "name": "John",
-        "email": "john@mail.ru",
-        "nameField": "entry.2067574475",
-        "emailField": "entry.531909222"
-      }
+      // const myJSObject = {
+      //   "formPath": "/forms/u/1/d/e/1FAIpQLSc6BWDbWZbiJdCdJ_tQemw2KTimBWFp_gvbe84AdHSYmB7ETQ/formResponse",
+      //   "name": "John",
+      //   "email": "john@mail.ru",
+      //   "nameField": "entry.2067574475",
+      //   "emailField": "entry.531909222"
+      // };
 
-      $.ajax({
-        url: action,
-        type: "POST",
-        contentType : 'application/json',
-        crossDomain: true,
-        // headers: { 'Access-Control-Allow-Origin': '*' },
-        data : JSON.stringify(myJSObject),
+      // $.ajax({
+      //   url: action,
+      //   type: "POST",
+      //   contentType : 'application/json',
+      //   crossDomain: true,
+      //   headers: { 'Access-Control-Allow-Origin': '*' },
+      //   data : JSON.stringify(myJSObject),
 
-        // if request is ok (200)
-        success: () => formModal.addClass('success'),
+      //   // if request is ok (200)
+      //   success: () => formModal.addClass('success'),
 
-        // if request is not ok
-        error: () => alert('Something is wrong!'),
-      });
+      //   // if request is not ok
+      //   error: () => alert('Something is wrong!'),
+      // });
 
       // if validation is not ok
     } else {
