@@ -32,7 +32,7 @@ $(document).ready(() => {
     const name = $('#modal-get-started__name').val();
     const email = $('#modal-get-started__email').val();
     const recatcha = $('#g-recaptcha-response').val();
-    const action = 'https://';
+    const action = 'https://functions.yandexcloud.net/d4e7thbic5lt2m8f3mps';
 
     // if ok
     if (name && email && recatcha) {
@@ -41,21 +41,17 @@ $(document).ready(() => {
 
       $.ajax({
         url: action,
+        type: "POST",
+        contentType : 'application/json',
         crossDomain: true,
         headers: { 'Access-Control-Allow-Origin': '*' },
         data: { name, email },
-        type: "POST",
 
         // if request is ok (200)
         success: () => formModal.addClass('success'),
 
         // if request is not ok
         error: () => alert('Something is wrong!'),
-        // statusCode: {
-        //   200: function() {
-        //     formModal.addClass('success');
-        //   },
-        // }
       });
 
       // if validation is not ok
