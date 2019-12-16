@@ -52,7 +52,7 @@ $(document).ready(() => {
         type: "POST",
         contentType : 'application/json',
         crossDomain: true,
-        headers: { 'Access-Control-Allow-Origin': '*' },
+        // headers: { 'Access-Control-Allow-Origin': '*' },
         data : JSON.stringify(myJSObject),
 
         // if request is ok (200)
